@@ -1,0 +1,12 @@
+<app-dog-editor [dog]="selectedDog"></app-dog-editor>
+
+<h3>{{title}}</h3>
+<ul>
+  <li *ngFor="let dog of dogs let i=index" >
+    <span>{{i+1}}) {{dog.name | uppercase}} - {{dog.weight}} born in {{dog.birthDate | date:(dog.toggle)}}</span >
+    <button (click)="editDog(dog)"> edit </button>
+    <!--<button type="button" (click)="changeDate((dog))">-</button>-->
+    <!--<button type="button" (click)="removeDogs((dog.name))">Remove</button>-->
+  </li>
+
+</ul>
